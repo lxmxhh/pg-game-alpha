@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML5</title>
+	<script type="text/javascript">
+	window.addEventListener('load', function () {
+		var elem = document.querySelector('#myCanvas1');
+		if (elem && elem.getContext) {   
+  			// Get the 2d context.   
+			// Remember: you can only initialize one context per element.   
+			var context = elem.getContext('2d');   
+			if (context) {   
+				// You are done! Now you can draw your first rectangle.   
+				// You only need to provide the (x,y) coordinates, followed by the width and     
+				// height dimensions.
+
+
+				// context.fillStyle   = '#00f'; // blue   
+				context.strokeStyle = '#f00'; // red   
+				// context.lineWidth   = 4;   
+				// Draw some rectangles.
+				// context.fillRect  (0,  0, 150, 50);   
+				// context.strokeRect(0,  0, 150, 50);   
+				// context.clearRect (30, 25,  90, 60);   
+				// context.strokeRect(30, 25,  90, 60);
+				context.beginPath();
+				context.arc(50,50,20,0,Math.PI, false);
+				context.stroke();
+			}   
+		}
+		// elem = document.querySelector("#myCanvas2");
+		// if (elem && elem.getContext) {   
+  // 			// Get the 2d context.   
+		// 	// Remember: you can only initialize one context per element.   
+		// 	var context = elem.getContext('2d');   
+		// 	if (context) {   
+		// 		// You are done! Now you can draw your first rectangle.   
+		// 		// You only need to provide the (x,y) coordinates, followed by the width and     
+		// 		// height dimensions.
+		// 		context.fillStyle = '#00f';
+		// 		context.fillRect(0, 0, 150, 100);   
+		// 	}   
+		// }
+	}, false);
+	</script>
+</head>
+<body>      
+    <div id="container" style="border:1px solid; cursor:none; width:240px; height:400px;">
+		<canvas id="myCanvas1" width="200" height="200">
+			Fallback content, in case the browser does not support Canvas.
+		</canvas>
+		<form name="f">
+			Stage: <input name="stage" value="First Throw" />
+			Point: <input name="pv" value="      " />
+			Outcome: <input name="outcome" value="      " />
+			<input type="submit" value="THROW DICE" />
+		</form>
+    </div>      
+</body>

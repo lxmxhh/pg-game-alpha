@@ -9,6 +9,6 @@ public class Phonegap02Activity extends DroidGap {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.loadUrl("file:///android_asset/www/dice2.html");
+        super.loadUrl("file:///android_asset/www/bounce2.html");
     }
 }
